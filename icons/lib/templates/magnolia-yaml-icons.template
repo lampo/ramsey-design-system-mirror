@@ -1,0 +1,15 @@
+<%
+print("# Do not edit directly\n");
+print("# Generated on " + new Date().toUTCString());
+icons = _.sortBy(dictionary.allTokens, prop => prop.name);
+
+function formatIconLabel(name) {
+  return name.split('-').map(_.upperFirst).join(' ');
+}
+%>
+
+<% icons.forEach(icon => { %>
+  - name: <%= icon.name %>
+    label: <%= formatIconLabel(icon.name) %>
+    value: <%= icon.name %>
+<% }) %>

@@ -1,0 +1,17 @@
+export const <%= token.name %> = forwardRef(
+  (
+    { title, ...rest }: IconTokenProps, ref: ForwardedRef<SVGSVGElement> ) => (
+    <svg
+      ref={ref}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="<%= token.attributes.viewBox %>"
+      width={<%= token.attributes.width %>}
+      height={<%= token.attributes.height %>}
+      {...rest}
+    >
+      {!!title && <title>{title}</title>}
+      <%= token.attributes.children %>
+    </svg>
+  ));
+
+<%= token.name %>.displayName = '<%= token.name %>';

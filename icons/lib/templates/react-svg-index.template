@@ -1,0 +1,9 @@
+<%
+print("// Do not edit directly\n");
+print("// Generated on " + new Date().toUTCString());
+const icons = _.sortBy(dictionary.allTokens, prop => prop.name);
+%>
+
+<% icons.forEach((icon) => { %>
+ export { <%= icon.name %> } from './<%= icon.name %>.js';
+<% }) %>

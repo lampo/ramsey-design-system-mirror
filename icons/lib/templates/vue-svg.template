@@ -1,0 +1,32 @@
+<%
+print("// Do not edit directly\n");
+print("// Generated on " + new Date().toUTCString());
+icon = _.find(dictionary.allTokens, prop => prop.name === options.iconName)
+%>
+
+<script>
+import { defineComponent } from "vue";
+export default defineComponent({
+  name: "<%= icon.name %>",
+});
+</script>
+
+<script setup>
+const props = defineProps({
+  title: { type: String },
+  width: { type: [String, Number], default: <%= icon.attributes.width %> },
+  height: { type: [String, Number], default: <%= icon.attributes.height %> },
+});
+</script>
+
+<template>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="<%= icon.attributes.viewBox %>"
+    :width="width"
+    :height="height"
+  >
+    <title v-if="title">{{ title }}</title>
+    <%= icon.attributes.children %>
+  </svg>
+</template>

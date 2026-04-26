@@ -1,0 +1,13 @@
+<%
+print("// Do not edit directly\n");
+print("// Generated on " + new Date().toUTCString());
+icon = _.find(allTokens, prop => prop.name === iconName)
+%>
+
+import React, { SVGAttributes, forwardRef, ForwardedRef } from 'react';
+
+interface IconTokenProps extends SVGAttributes<HTMLOrSVGElement> {
+  title?: string;
+}
+
+<%= component(icon) %>

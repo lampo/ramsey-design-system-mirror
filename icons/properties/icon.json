@@ -1,0 +1,564 @@
+{
+  "asset": {
+    "icon": {
+      "android": {
+        "value": "src/svg/android.svg"
+      },
+      "apple": {
+        "value": "src/svg/apple.svg"
+      },
+      "apps": {
+        "value": "src/svg/apps.svg"
+      },
+      "arrow-left": {
+        "value": "src/svg/arrow-left.svg"
+      },
+      "arrow-right": {
+        "value": "src/svg/arrow-right.svg"
+      },
+      "arrow-right-arrow-left": {
+        "value": "src/svg/arrow-right-arrow-left.svg"
+      },
+      "at-sign": {
+        "value": "src/svg/at-sign.svg"
+      },
+      "audio-outlined": {
+        "value": "src/svg/audio-outlined.svg"
+      },
+      "audio": {
+        "value": "src/svg/audio.svg"
+      },
+      "avatar-outlined": {
+        "value": "src/svg/avatar-outlined.svg"
+      },
+      "avatar": {
+        "value": "src/svg/avatar.svg"
+      },
+      "award": {
+        "value": "src/svg/award.svg"
+      },
+      "award-outlined": {
+        "value": "src/svg/award-outlined.svg"
+      },
+      "baby-steps": {
+        "value": "src/svg/baby-steps.svg"
+      },
+      "baby-steps-gem-facet": {
+        "value": "src/svg/baby-steps-gem-facet.svg"
+      },
+      "baby-steps-gem-outlined": {
+        "value": "src/svg/baby-steps-gem-outlined.svg"
+      },
+      "baby-steps-gem": {
+        "value": "src/svg/baby-steps-gem.svg"
+      },
+      "bank-outlined": {
+        "value": "src/svg/bank-outlined.svg"
+      },
+      "bank": {
+        "value": "src/svg/bank.svg"
+      },
+      "book-open-outlined": {
+        "value": "src/svg/book-open-outlined.svg"
+      },
+      "book-open": {
+        "value": "src/svg/book-open.svg"
+      },
+      "bookmark-outlined": {
+        "value": "src/svg/bookmark-outlined.svg"
+      },
+      "bookmark": {
+        "value": "src/svg/bookmark.svg"
+      },
+      "books-outlined": {
+        "value": "src/svg/books-outlined.svg"
+      },
+      "books": {
+        "value": "src/svg/books.svg"
+      },
+      "calendar": {
+        "value": "src/svg/calendar.svg"
+      },
+      "cart-outlined": {
+        "value": "src/svg/cart-outlined.svg"
+      },
+      "cart": {
+        "value": "src/svg/cart.svg"
+      },
+      "chart-bar": {
+        "value": "src/svg/chart-bar.svg"
+      },
+      "chart-donut": {
+        "value": "src/svg/chart-donut.svg"
+      },
+      "chat-outlined": {
+        "value": "src/svg/chat-outlined.svg"
+      },
+      "chat": {
+        "value": "src/svg/chat.svg"
+      },
+      "checkmark": {
+        "value": "src/svg/checkmark.svg"
+      },
+      "chevron-down": {
+        "value": "src/svg/chevron-down.svg"
+      },
+      "chevron-left": {
+        "value": "src/svg/chevron-left.svg"
+      },
+      "chevron-right": {
+        "value": "src/svg/chevron-right.svg"
+      },
+      "chevron-up": {
+        "value": "src/svg/chevron-up.svg"
+      },
+      "close": {
+        "value": "src/svg/close.svg"
+      },
+      "collapse-full": {
+        "value": "src/svg/collapse-full.svg"
+      },
+      "collapse": {
+        "value": "src/svg/collapse.svg"
+      },
+      "copy-outlined": {
+        "value": "src/svg/copy-outlined.svg"
+      },
+      "copy": {
+        "value": "src/svg/copy.svg"
+      },
+      "dashboard-outlined": {
+        "value": "src/svg/dashboard-outlined.svg"
+      },
+      "dashboard": {
+        "value": "src/svg/dashboard.svg"
+      },
+      "debit-card-outlined": {
+        "value": "src/svg/debit-card-outlined.svg"
+      },
+      "debit-card": {
+        "value": "src/svg/debit-card.svg"
+      },
+      "delete-outlined": {
+        "value": "src/svg/delete-outlined.svg"
+      },
+      "delete": {
+        "value": "src/svg/delete.svg"
+      },
+      "document-outlined": {
+        "value": "src/svg/document-outlined.svg"
+      },
+      "document": {
+        "value": "src/svg/document.svg"
+      },
+      "dollar-sign": {
+        "value": "src/svg/dollar-sign.svg"
+      },
+      "download-outlined": {
+        "value": "src/svg/download-outlined.svg"
+      },
+      "download": {
+        "value": "src/svg/download.svg"
+      },
+      "drag-and-drop": {
+        "value": "src/svg/drag-and-drop.svg"
+      },
+      "edit-outlined": {
+        "value": "src/svg/edit-outlined.svg"
+      },
+      "edit": {
+        "value": "src/svg/edit.svg"
+      },
+      "elp": {
+        "value": "src/svg/elp.svg"
+      },
+      "email-outlined": {
+        "value": "src/svg/email-outlined.svg"
+      },
+      "email": {
+        "value": "src/svg/email.svg"
+      },
+      "entreleadership": {
+        "value": "src/svg/entreleadership.svg"
+      },
+      "error-outlined": {
+        "value": "src/svg/error-outlined.svg"
+      },
+      "error": {
+        "value": "src/svg/error.svg"
+      },
+      "everydollar": {
+        "value": "src/svg/everydollar.svg"
+      },
+      "expand-full": {
+        "value": "src/svg/expand-full.svg"
+      },
+      "expand": {
+        "value": "src/svg/expand.svg"
+      },
+      "facebook": {
+        "value": "src/svg/facebook.svg"
+      },
+      "filter-outlined": {
+        "value": "src/svg/filter-outlined.svg"
+      },
+      "filter": {
+        "value": "src/svg/filter.svg"
+      },
+      "financial-peace": {
+        "value": "src/svg/financial-peace.svg"
+      },
+      "folder-outlined": {
+        "value": "src/svg/folder-outlined.svg"
+      },
+      "folder": {
+        "value": "src/svg/folder.svg"
+      },
+      "gift-outlined": {
+        "value": "src/svg/gift-outlined.svg"
+      },
+      "gift": {
+        "value": "src/svg/gift.svg"
+      },
+      "google-play": {
+        "value": "src/svg/google-play.svg"
+      },
+      "graduation-cap-outlined": {
+        "value": "src/svg/graduation-cap-outlined.svg"
+      },
+      "graduation-cap": {
+        "value": "src/svg/graduation-cap.svg"
+      },
+      "group-outlined": {
+        "value": "src/svg/group-outlined.svg"
+      },
+      "group": {
+        "value": "src/svg/group.svg"
+      },
+      "heart-outlined": {
+        "value": "src/svg/heart-outlined.svg"
+      },
+      "heart": {
+        "value": "src/svg/heart.svg"
+      },
+      "help-outlined": {
+        "value": "src/svg/help-outlined.svg"
+      },
+      "help": {
+        "value": "src/svg/help.svg"
+      },
+      "hide-outlined": {
+        "value": "src/svg/hide-outlined.svg"
+      },
+      "hide": {
+        "value": "src/svg/hide.svg"
+      },
+      "home-outlined": {
+        "value": "src/svg/home-outlined.svg"
+      },
+      "home": {
+        "value": "src/svg/home.svg"
+      },
+      "information-outlined": {
+        "value": "src/svg/information-outlined.svg"
+      },
+      "information": {
+        "value": "src/svg/information.svg"
+      },
+      "instagram": {
+        "value": "src/svg/instagram.svg"
+      },
+      "lightning-outlined": {
+        "value": "src/svg/lightning-outlined.svg"
+      },
+      "lightning": {
+        "value": "src/svg/lightning.svg"
+      },
+      "link-external": {
+        "value": "src/svg/link-external.svg"
+      },
+      "link": {
+        "value": "src/svg/link.svg"
+      },
+      "linkedin": {
+        "value": "src/svg/linkedin.svg"
+      },
+      "list-content-outlined": {
+        "value": "src/svg/list-content-outlined.svg"
+      },
+      "list-content": {
+        "value": "src/svg/list-content.svg"
+      },
+      "list": {
+        "value": "src/svg/list.svg"
+      },
+      "location-outlined": {
+        "value": "src/svg/location-outlined.svg"
+      },
+      "location": {
+        "value": "src/svg/location.svg"
+      },
+      "lock-outlined": {
+        "value": "src/svg/lock-outlined.svg"
+      },
+      "lock": {
+        "value": "src/svg/lock.svg"
+      },
+      "menu": {
+        "value": "src/svg/menu.svg"
+      },
+      "minus": {
+        "value": "src/svg/minus.svg"
+      },
+      "more": {
+        "value": "src/svg/more.svg"
+      },
+      "notifications-outlined": {
+        "value": "src/svg/notifications-outlined.svg"
+      },
+      "notifications": {
+        "value": "src/svg/notifications.svg"
+      },
+      "paper-plane-outlined": {
+        "value": "src/svg/paper-plane-outlined.svg"
+      },
+      "paper-plane": {
+        "value": "src/svg/paper-plane.svg"
+      },
+      "pause-outlined": {
+        "value": "src/svg/pause-outlined.svg"
+      },
+      "pause": {
+        "value": "src/svg/pause.svg"
+      },
+      "percent-sign": {
+        "value": "src/svg/percent-sign.svg"
+      },
+      "phone-outlined": {
+        "value": "src/svg/phone-outlined.svg"
+      },
+      "phone": {
+        "value": "src/svg/phone.svg"
+      },
+      "pinterest": {
+        "value": "src/svg/pinterest.svg"
+      },
+      "person": {
+        "value": "src/svg/person.svg"
+      },
+      "person-outlined": {
+        "value": "src/svg/person-outlined.svg"
+      },
+      "piggy-bank": {
+        "value": "src/svg/piggy-bank.svg"
+      },
+      "piggy-bank-outlined": {
+        "value": "src/svg/piggy-bank-outlined.svg"
+      },
+      "play-outlined": {
+        "value": "src/svg/play-outlined.svg"
+      },
+      "play": {
+        "value": "src/svg/play.svg"
+      },
+      "plus-circle-outlined": {
+        "value": "src/svg/plus-circle-outlined.svg"
+      },
+      "plus-circle": {
+        "value": "src/svg/plus-circle.svg"
+      },
+      "plus": {
+        "value": "src/svg/plus.svg"
+      },
+      "processing": {
+        "value": "src/svg/processing.svg"
+      },
+      "rachel-cruze": {
+        "value": "src/svg/rachel-cruze.svg"
+      },
+      "ramsey-financial-coach": {
+        "value": "src/svg/ramsey-financial-coach.svg"
+      },
+      "ramsey": {
+        "value": "src/svg/ramsey.svg"
+      },
+      "ramsey-plus": {
+        "value": "src/svg/ramsey-plus.svg"
+      },
+      "ramsey-network": {
+        "value": "src/svg/ramsey-network.svg"
+      },
+      "ramsey-smart-tax": {
+        "value": "src/svg/ramsey-smart-tax.svg"
+      },
+      "ramsey-trusted": {
+        "value": "src/svg/ramsey-trusted.svg"
+      },
+      "refresh": {
+        "value": "src/svg/refresh.svg"
+      },
+      "reply-outlined": {
+        "value": "src/svg/reply-outlined.svg"
+      },
+      "reply": {
+        "value": "src/svg/reply.svg"
+      },
+      "search": {
+        "value": "src/svg/search.svg"
+      },
+      "settings-outlined": {
+        "value": "src/svg/settings-outlined.svg"
+      },
+      "settings": {
+        "value": "src/svg/settings.svg"
+      },
+      "share": {
+        "value": "src/svg/share.svg"
+      },
+      "show-outlined": {
+        "value": "src/svg/show-outlined.svg"
+      },
+      "show": {
+        "value": "src/svg/show.svg"
+      },
+      "shuffle": {
+        "value": "src/svg/shuffle.svg"
+      },
+      "sign-out": {
+        "value": "src/svg/sign-out.svg"
+      },
+      "smartdollar": {
+        "value": "src/svg/smartdollar.svg"
+      },
+      "smartvestor": {
+        "value": "src/svg/smartvestor.svg"
+      },
+      "sort": {
+        "value": "src/svg/sort.svg"
+      },
+      "speedy-cart-outlined": {
+        "value": "src/svg/speedy-cart-outlined.svg"
+      },
+      "spotify": {
+        "value": "src/svg/spotify.svg"
+      },
+      "star-half-outlined": {
+        "value": "src/svg/star-half-outlined.svg"
+      },
+      "star-half": {
+        "value": "src/svg/star-half.svg"
+      },
+      "star-outlined": {
+        "value": "src/svg/star-outlined.svg"
+      },
+      "star": {
+        "value": "src/svg/star.svg"
+      },
+      "stop-outlined": {
+        "value": "src/svg/stop-outlined.svg"
+      },
+      "stop": {
+        "value": "src/svg/stop.svg"
+      },
+      "success-outlined": {
+        "value": "src/svg/success-outlined.svg"
+      },
+      "success": {
+        "value": "src/svg/success.svg"
+      },
+      "tag-outlined": {
+        "value": "src/svg/tag-outlined.svg"
+      },
+      "tag": {
+        "value": "src/svg/tag.svg"
+      },
+      "target": {
+        "value": "src/svg/target.svg"
+      },
+      "thumbs-down-outlined": {
+        "value": "src/svg/thumbs-down-outlined.svg"
+      },
+      "thumbs-down": {
+        "value": "src/svg/thumbs-down.svg"
+      },
+      "thumbs-up-outlined": {
+        "value": "src/svg/thumbs-up-outlined.svg"
+      },
+      "thumbs-up": {
+        "value": "src/svg/thumbs-up.svg"
+      },
+      "tiktok": {
+        "value": "src/svg/tiktok.svg"
+      },
+      "time-outlined": {
+        "value": "src/svg/time-outlined.svg"
+      },
+      "time": {
+        "value": "src/svg/time.svg"
+      },
+      "trophy": {
+        "value": "src/svg/trophy.svg"
+      },
+      "trophy-outlined": {
+        "value": "src/svg/trophy-outlined.svg"
+      },
+      "tools-outlined": {
+        "value": "src/svg/tools-outlined.svg"
+      },
+      "tools": {
+        "value": "src/svg/tools.svg"
+      },
+      "truck-outlined": {
+        "value": "src/svg/truck-outlined.svg"
+      },
+      "truck": {
+        "value": "src/svg/truck.svg"
+      },
+      "twitter": {
+        "value": "src/svg/twitter.svg"
+      },
+      "unlock-outlined": {
+        "value": "src/svg/unlock-outlined.svg"
+      },
+      "unlock": {
+        "value": "src/svg/unlock.svg"
+      },
+      "upload-outlined": {
+        "value": "src/svg/upload-outlined.svg"
+      },
+      "upload": {
+        "value": "src/svg/upload.svg"
+      },
+      "video-outlined": {
+        "value": "src/svg/video-outlined.svg"
+      },
+      "video": {
+        "value": "src/svg/video.svg"
+      },
+      "volume-off-outlined": {
+        "value": "src/svg/volume-off-outlined.svg"
+      },
+      "volume-off": {
+        "value": "src/svg/volume-off.svg"
+      },
+      "volume-on-outlined": {
+        "value": "src/svg/volume-on-outlined.svg"
+      },
+      "volume-on": {
+        "value": "src/svg/volume-on.svg"
+      },
+      "volume-outlined": {
+        "value": "src/svg/volume-outlined.svg"
+      },
+      "volume": {
+        "value": "src/svg/volume.svg"
+      },
+      "x": {
+        "value": "src/svg/x.svg"
+      },
+      "youtube": {
+        "value": "src/svg/youtube.svg"
+      }
+    }
+  }
+}
