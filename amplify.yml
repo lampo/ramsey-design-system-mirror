@@ -1,0 +1,15 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - printf 'registry="https://ramseysolutions.jfrog.io/artifactory/api/npm/npm/"\n//ramseysolutions.jfrog.io/artifactory/api/npm/npm/:_auth = ${NPM_AUTH_TOKEN}\nalways-auth = true' > ~/.npmrc
+        - yarn install
+    build:
+      commands:
+        - if [ "${STORYBOOK_FRAMEWORK}" == "react" ]; then yarn run build-storybook; fi
+        - if [ "${STORYBOOK_FRAMEWORK}" == "vue" ]; then yarn run build-storybook:vue; fi
+  artifacts:
+    baseDirectory: storybook-static
+    files:
+      - "**/*"

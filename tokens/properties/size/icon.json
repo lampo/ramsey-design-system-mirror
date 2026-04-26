@@ -1,0 +1,13 @@
+{
+  "size": {
+    "icon": {
+      "xs": { "value": "12" },
+      "sm": { "value": "14" },
+      "md": { "value": "16" },
+      "lg": { "value": "24" },
+      "xl": { "value": "32" },
+      "2xl": { "value": "48" },
+      "3xl": { "value": "64" }
+    }
+  }
+}

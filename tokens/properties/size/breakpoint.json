@@ -1,0 +1,11 @@
+{
+  "size": {
+    "breakpoint": {
+      "sm": { "value": "600" },
+      "md": { "value": "900" },
+      "lg": { "value": "1200" },
+      "xl": { "value": "1500" },
+      "2xl": { "value": "1800" }
+    }
+  }
+}

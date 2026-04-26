@@ -1,0 +1,8 @@
+<% print("/* Do not edit directly */"); %>
+<% print("/* Generated on " + new Date().toUTCString() + " */"); %>
+
+<% print("/* stylelint-disable at-rule-no-unknown */"); %>
+<% print("@theme"); %>
+{
+<%= printCssTokens(allTokens) %>
+}

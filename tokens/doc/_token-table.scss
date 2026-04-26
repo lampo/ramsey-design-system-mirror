@@ -1,0 +1,45 @@
+@import "../dist/variables";
+
+.TokenTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  line-height: $rds-size-line-height-md;
+  font-variant-numeric: lining-nums tabular-nums;
+  font-family: $rds-font-family-gibson;
+
+  tr {
+    border-bottom: $rds-size-border-sm solid $rds-color-base-gray-20;
+
+    &:last-of-type {
+      border: 0;
+    }
+  }
+
+  td,
+  th {
+    padding: 16px;
+    padding-right: 8px;
+    vertical-align: top;
+    font-size: $rds-size-font-3;
+
+    &:last-of-type {
+      padding-right: 16px;
+    }
+  }
+
+  thead {
+    th {
+      font-weight: $rds-font-weight-semibold;
+    }
+
+    tr:last-of-type {
+      border-bottom: $rds-size-border-sm solid $rds-color-base-gray-20;
+    }
+  }
+
+  &-label {
+    color: $rds-color-base-gray-60;
+  }
+}

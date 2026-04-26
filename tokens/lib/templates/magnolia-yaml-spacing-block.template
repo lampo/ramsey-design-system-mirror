@@ -1,0 +1,10 @@
+<%
+print("# Do not edit directly\n");
+print("# Generated on " + new Date().toUTCString());
+%>
+
+<% allTokens.forEach(property => { %>
+- name: <%= _.camelCase([property.attributes.type, property.attributes.item, property.attributes.subitem]) %>
+  value: <%= _.camelCase([property.attributes.type, property.attributes.item, property.attributes.subitem]) %>
+  label: <%= printFullSpacingBlockLabel(property.attributes.subitem, TSHIRT_SIZE_FULL_LABELS_MAP) %>
+<% }) %>

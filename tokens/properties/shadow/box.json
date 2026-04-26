@@ -1,0 +1,10 @@
+{
+  "shadow": {
+    "box": {
+      "none": { "value": "none" },
+      "sm": { "value": "0 2px 4px 0 {color.shadow.sm}" },
+      "md": { "value": "0 4px 16px 0 {color.shadow.md}" },
+      "lg": { "value": "0 8px 24px 0 {color.shadow.lg}" }
+    }
+  }
+}

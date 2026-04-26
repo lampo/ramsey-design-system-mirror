@@ -1,0 +1,12 @@
+<%
+print("# Do not edit directly\n");
+print("# Generated on " + new Date().toUTCString());
+
+const sortedColors = allTokens.sort(baseColorSorter)
+%>
+
+<% sortedColors.forEach(color => { %>
+- name: <%= color.name %>
+  label: <%= _.startCase(color.name) %>
+  value: "<%= color.value %>"
+<% }) %>

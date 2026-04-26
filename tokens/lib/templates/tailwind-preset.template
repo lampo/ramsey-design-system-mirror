@@ -1,0 +1,125 @@
+<%
+print("// Do not edit directly\n");
+print("// Generated on " + new Date().toUTCString());
+%>
+
+const plugin = require("tailwindcss/plugin");
+
+module.exports = {
+  theme: {
+    screens: {
+      <%= printTokenItems(tokens.size.breakpoint) %>
+    },
+    colors: {
+      inherit: "inherit",
+      transparent: "transparent",
+      current: "currentColor",
+      <%= printTokenItems(tokens.color.base, false) %>
+    },
+    backgroundColor: ({ theme }) => ({
+      ...theme("colors"),
+      <%= printTokenItems(tokens.color.background) %>
+    }),
+    spacing: {
+      px: "1px",
+      <% TAILWIND_SPACING_SCALE.forEach((multiple) => { %><%=
+      multiple %>: "<%= tokens.size.spacing.basis.original.value * multiple %>px",
+      <% }); %>
+    },
+    borderColor: ({ theme }) => ({
+      ...theme('colors'),
+      <%= printTokenItems(tokens.color.border) %>
+    }),
+    borderRadius: {
+      DEFAULT: "<%= tokens.size.radius.md.value %>",
+      <%= printTokenItems(tokens.size.radius) %>
+    },
+    borderWidth: {
+      DEFAULT: "<%= tokens.size.border.sm.value %>",
+      <%= printTokenItems(tokens.size.border) %>
+    },
+    boxShadow: {
+      DEFAULT: "<%= tokens.shadow.box.md.value %>",
+      <%= printTokenItems(tokens.shadow.box) %>
+    },
+    boxShadowColor: {},
+    fontFamily: {
+      <%= printTokenItems(tokens.font.family) %>
+    },
+    fontSize: {
+      <%= printTokenItems(tokens.size.font) %>
+    },
+    fontWeight: {
+      <%= printTokenItems(tokens.font.weight) %>
+    },
+    gap: ({ theme }) => theme("rds.spacing.inline"),
+    lineHeight: {
+      <%= printTokenItems(tokens.size.lineHeight) %>
+    },
+    space: ({ theme }) => ({
+      ...theme("rds.spacing.block"),
+    }),
+    textColor: ({ theme }) => ({
+      ...theme('colors'),
+      <%= printTokenItems(tokens.color.text) %>
+    }),
+    rds: {
+      spacing: {
+        <%= printTokenItems(tokens.size.spacing, false) %>
+      },
+      icon: {
+        <%= printTokenItems(tokens.size.icon) %>
+      }
+    },
+  },
+  plugins: [
+    plugin(function ({ matchUtilities, theme }) {
+      const matchArgs = [
+        [
+          {
+            ["p-inset"]: (value) => ({
+              padding: value,
+            }),
+          },
+          { values: theme("rds.spacing.inset") },
+        ],
+        [
+          {
+            ["p-squish"]: (value) => ({
+              padding: value,
+            }),
+          },
+          { values: theme("rds.spacing.insetSquish") },
+        ],
+        [
+          {
+            ["m-inline"]: (value) => ({
+              marginRight: value,
+            }),
+          },
+          { values: theme("rds.spacing.inline") },
+        ],
+        [
+          {
+            ["m-block"]: (value) => ({
+              marginBottom: value,
+            }),
+          },
+          { values: theme("rds.spacing.block") },
+        ],
+        [
+          {
+            ["icon"]: (value) => ({
+              width: value,
+            }),
+          },
+          { values: theme("rds.icon") },
+        ],
+      ];
+
+      matchArgs.forEach((a) => {
+        matchUtilities(...a);
+      });
+    }),
+  ],
+}

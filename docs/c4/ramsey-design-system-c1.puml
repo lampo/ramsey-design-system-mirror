@@ -1,0 +1,48 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+
+' C4 OFFICIAL REQUIREMENT: Title describing diagram type and scope
+title System Context Diagram for Ramsey Design System
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v3.0.0
+!include ICONURL/devicons2/react.puml
+!include ICONURL/devicons2/vuejs.puml
+!include ICONURL/font-awesome-6/users.puml
+!include ICONURL/font-awesome-6/desktop.puml
+!include ICONURL/font-awesome-6/server.puml
+!include ICONURL/font-awesome-6/cubes.puml
+!include ICONURL/font-awesome-6/book.puml
+!include ICONURL/devicons2/gitlab.puml
+
+HIDE_STEREOTYPE()
+
+' C4 OFFICIAL REQUIREMENT: People who interact with the system
+Person(frontend_dev, "Frontend Developer", "Builds web applications using React or Vue components from the design system", $sprite="users")
+Person(backend_dev, "Backend Developer", "Builds server-rendered applications using Freemarker or Ruby ViewComponents", $sprite="users")
+Person(ds_maintainer, "Design System Maintainer", "Develops, maintains, and publishes design system components", $sprite="users")
+
+' C4 OFFICIAL REQUIREMENT: The software system in focus
+System(ramsey_ds, "Ramsey Design System", "Multi-platform component library providing UI components, design tokens, and icons for Ramsey Solutions applications. Supports React, Vue 3, Freemarker, and Ruby ViewComponents.", $sprite="cubes")
+
+' C4 OFFICIAL REQUIREMENT: External systems that interact with our system
+System_Ext(consumer_web_apps, "Consumer Web Applications", "React and Vue applications across Ramsey Solutions that consume the design system components", $sprite="desktop")
+System_Ext(consumer_backend_apps, "Consumer Backend Applications", "Freemarker and Ruby on Rails applications that use server-side rendered components", $sprite="server")
+System_Ext(artifactory, "Artifactory", "JFrog Artifactory repository manager for npm packages and Ruby gems", $sprite="cubes")
+System_Ext(gitlab_cicd, "GitLab CI/CD", "Automated build, test, and deployment pipeline for the design system", $sprite="gitlab")
+System_Ext(storybook_docs, "Storybook Documentation", "Public documentation site at design.ramseysolutions.com showcasing components and usage examples", $sprite="book")
+
+' C4 OFFICIAL REQUIREMENT: High-level interactions (no technology details at this level)
+Rel(frontend_dev, ramsey_ds, "Installs and uses components in applications")
+Rel(backend_dev, ramsey_ds, "Installs and uses components in applications")
+Rel(ds_maintainer, ramsey_ds, "Develops and maintains components")
+
+Rel(ramsey_ds, consumer_web_apps, "Provides UI components and tokens to")
+Rel(ramsey_ds, consumer_backend_apps, "Provides UI components to")
+Rel(ramsey_ds, artifactory, "Publishes packages to")
+Rel(ramsey_ds, storybook_docs, "Deploys documentation to")
+
+Rel(gitlab_cicd, ramsey_ds, "Builds, tests, and releases")
+Rel(frontend_dev, storybook_docs, "Views component documentation and examples")
+Rel(backend_dev, storybook_docs, "Views component documentation and examples")
+
+@enduml

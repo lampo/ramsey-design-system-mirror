@@ -1,0 +1,22 @@
+{
+  "name": "@ramsey-design-system/tokens",
+  "version": "1.21.11",
+  "author": "Ramsey Solutions",
+  "license": "UNLICENSED",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/main.json",
+  "devDependencies": {
+    "style-dictionary": "5.4.0"
+  },
+  "scripts": {
+    "build": "node ./build.mjs && yarn run build:js && yarn run format:dist",
+    "build:tailwind-stub": "yarn build && cp dist/tailwind-preset.js stubs/tailwind-preset.stub.js && cp dist/tailwind-css-variables.css stubs/tailwind-css-variables.stub.css",
+    "build:js": "rollup -c",
+    "format:dist": "prettier --write \"dist/**/*.{js,ts,css,json}\" --ignore-path .prettierignore"
+  },
+  "dependencies": {
+    "strip-ansi": "^7.1.2"
+  }
+}

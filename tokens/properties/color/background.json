@@ -1,0 +1,32 @@
+{
+  "color": {
+    "background": {
+      "overlay": {
+        "value": "#1f2426",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.64
+          }
+        ]
+      },
+      "base": {
+        "value": "{color.base.gray.10}"
+      },
+      "control": {
+        "_": {
+          "value": "{color.base.white}"
+        },
+        "disabled": {
+          "value": "{color.base.gray.10}"
+        }
+      },
+      "success": {
+        "value": "{color.base.green.70}"
+      },
+      "error": {
+        "value": "{color.base.red.60}"
+      }
+    }
+  }
+}

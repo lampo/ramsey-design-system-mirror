@@ -1,0 +1,14 @@
+{
+  "size": {
+    "radius": {
+      "none": { "value": "0" },
+      "sm": { "value": "4" },
+      "md": { "value": "8" },
+      "lg": { "value": "16" },
+      "full": { "value": "9999" },
+      "control": {
+        "value": "{size.radius.sm}"
+      }
+    }
+  }
+}

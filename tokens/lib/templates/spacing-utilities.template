@@ -1,0 +1,16 @@
+<%
+print("/* Do not edit directly */\n");
+print("/* Generated on " + new Date().toUTCString() +  " */");
+%>
+
+<% allTokens.forEach(property => { %>
+  .u-<%= _.camelCase([property.attributes.type, property.attributes.item, property.attributes.subitem]) %> {
+    <% if (property.attributes.item === 'block') { %>
+      margin-bottom: <%= property.value %> !important;
+    <% } else if (property.attributes.item === 'inline') { %>
+      margin-right: <%= property.value %> !important;
+    <% } else { %>
+      padding: <%= property.value %> !important;
+    <% } %>
+  }
+<% }) %>

@@ -1,0 +1,47 @@
+{
+  "size": {
+    "spacing": {
+      "none": { "value": "0" },
+      "basis": { "value": "8" },
+      "inset": {
+        "xs": { "value": "8" },
+        "sm": { "value": "12" },
+        "md": { "value": "16" },
+        "lg": { "value": "24" },
+        "xl": { "value": "32" },
+        "2xl": { "value": "48" }
+      },
+      "insetSquish": {
+        "xs": { "value": ["4", "8"] },
+        "sm": { "value": ["8", "16"] },
+        "md": { "value": ["12", "20"] },
+        "lg": { "value": ["16", "24"] },
+        "xl": { "value": ["20", "28"] }
+      },
+      "inline": {
+        "2xs": { "value": "2" },
+        "xs": { "value": "4" },
+        "sm": { "value": "8" },
+        "md": { "value": "16" },
+        "lg": { "value": "24" },
+        "xl": { "value": "32" },
+        "2xl": { "value": "48" },
+        "3xl": { "value": "64" }
+      },
+      "block": {
+        "2xs": { "value": "2" },
+        "xs": { "value": "4" },
+        "sm": { "value": "8" },
+        "md": { "value": "16" },
+        "lg": { "value": "24" },
+        "xl": { "value": "32" },
+        "2xl": { "value": "48" },
+        "3xl": { "value": "64" },
+        "4xl": { "value": "96" },
+        "5xl": { "value": "160" },
+        "6xl": { "value": "256" },
+        "7xl": { "value": "384" }
+      }
+    }
+  }
+}

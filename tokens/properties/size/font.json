@@ -1,0 +1,30 @@
+{
+  "size": {
+    "font": {
+      "1": { "value": "12", "lineHeight": "{size.lineHeight.md}" },
+      "2": { "value": "14", "lineHeight": "{size.lineHeight.md}" },
+      "3": { "value": "16", "lineHeight": "{size.lineHeight.md}" },
+      "4": { "value": "18", "lineHeight": "{size.lineHeight.md}" },
+      "5": { "value": "20", "lineHeight": "{size.lineHeight.md}" },
+      "6": { "value": "24", "lineHeight": "{size.lineHeight.md}" },
+      "7": { "value": "28", "lineHeight": "{size.lineHeight.md}" },
+      "8": { "value": "34", "lineHeight": "{size.lineHeight.md}" },
+      "9": { "value": "40", "lineHeight": "{size.lineHeight.md}" },
+      "10": { "value": "48", "lineHeight": "{size.lineHeight.sm}" },
+      "11": { "value": "60", "lineHeight": "{size.lineHeight.sm}" },
+      "12": { "value": "72", "lineHeight": "{size.lineHeight.sm}" },
+      "13": { "value": "96", "lineHeight": "{size.lineHeight.sm}" },
+      "control": {
+        "sm": {
+          "value": "{size.font.2}"
+        },
+        "md": {
+          "value": "{size.font.3}"
+        },
+        "lg": {
+          "value": "{size.font.4}"
+        }
+      }
+    }
+  }
+}

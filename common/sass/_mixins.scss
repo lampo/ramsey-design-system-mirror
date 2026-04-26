@@ -1,0 +1,24 @@
+@import "@ramsey-design-system/tokens/dist/variables";
+
+@mixin rds-interactive-state {
+  outline: $rds-size-border-md solid $rds-color-base-blue-50;
+  outline-offset: $rds-size-border-sm;
+}
+
+@mixin rds-super-sub-script-styles {
+  sup,
+  sub {
+    line-height: 0;
+    font-size: 0.875em;
+  }
+
+  sup {
+    top: initial;
+    vertical-align: super;
+  }
+
+  sub {
+    bottom: initial;
+    vertical-align: sub;
+  }
+}

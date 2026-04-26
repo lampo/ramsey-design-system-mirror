@@ -1,0 +1,160 @@
+@import "@ramsey-design-system/tokens/dist/variables";
+
+// Make everything a border-box, because why not?
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Antialias!
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-font-smoothing: inherit;
+}
+
+// Clickable form elements should have a pointer.
+label,
+select,
+option,
+button {
+  cursor: pointer;
+}
+
+// Reset fieldset and restrict textarea to vertical resizing
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+// Reset default button styles, which are never used.
+button,
+[type="button"],
+[type="submit"],
+[type="reset"] {
+  margin: 0;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  width: auto;
+  color: inherit;
+  font: inherit;
+  -webkit-font-smoothing: antialiased;
+  appearance: none;
+  user-select: none;
+  user-select: none;
+  user-select: none;
+  user-select: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+// You want these elements fluid, probably.
+img,
+canvas,
+iframe,
+video,
+svg,
+select {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+// Remove default margins.
+figure {
+  margin: 0;
+}
+
+// Base Styles
+html {
+  background-color: $rds-color-background-base;
+  color: $rds-color-text-base;
+}
+
+body {
+  line-height: $rds-size-line-height-lg;
+  font-family: $rds-font-family-gibson;
+  font-size: $rds-size-font-4;
+}
+
+blockquote,
+dl,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+menu,
+p,
+pre,
+ul {
+  margin-top: 0;
+  margin-bottom: $rds-size-spacing-block-md;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: $rds-size-font-4;
+  font-weight: $rds-font-weight-heading;
+}
+
+b,
+strong {
+  font-weight: $rds-font-weight-strong;
+}
+
+a {
+  color: $rds-color-text-link;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $rds-color-text-link-interactive;
+  }
+}
+
+small,
+sub,
+sup {
+  font-size: $rds-size-font-2;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  line-height: $rds-size-line-height-md;
+}

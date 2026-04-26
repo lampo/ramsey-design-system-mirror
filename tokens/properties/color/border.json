@@ -1,0 +1,20 @@
+{
+  "color": {
+    "border": {
+      "control": {
+        "_": {
+          "value": "{color.base.gray.60}"
+        },
+        "disabled": {
+          "value": "{color.base.gray.30}"
+        },
+        "interactive": {
+          "value": "{color.base.blue.50}"
+        }
+      },
+      "error": {
+        "value": "{color.base.red.60}"
+      }
+    }
+  }
+}

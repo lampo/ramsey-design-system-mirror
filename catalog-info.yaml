@@ -1,0 +1,11 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ramsey-design-system
+  annotations:
+    gitlab.com/project-id: '48519745'
+    gocd.org/pipelines: ramsey-design-system, ramsey-design-system-prs
+spec:
+  type: general
+  lifecycle: production

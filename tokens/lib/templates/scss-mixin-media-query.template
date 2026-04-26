@@ -1,0 +1,12 @@
+<%
+print("// Do not edit directly\n");
+print("// Generated on " + new Date().toUTCString());
+%>
+
+<% allTokens.forEach(breakpoint => { %>
+@mixin rds-media-query-<%= breakpoint.attributes.item %>-and-up {
+  @media screen and (min-width: <%= breakpoint.value %>) {
+    @content;
+  }
+}
+<% }) %>

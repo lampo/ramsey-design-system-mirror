@@ -1,0 +1,11 @@
+{
+  "font": {
+    "family": {
+      "arial": { "value": "Arial, sans-serif" },
+      "gibson": { "value": "canada-type-gibson, Arial, sans-serif" },
+      "base": {
+        "value": "{font.family.gibson}"
+      }
+    }
+  }
+}

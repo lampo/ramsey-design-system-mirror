@@ -1,0 +1,24 @@
+{
+  "color": {
+    "brand": {
+      "twitter": {
+        "value": "#1da1f2"
+      },
+      "linkedin": {
+        "value": "#0077b5"
+      },
+      "facebook": {
+        "value": "#3b5998"
+      },
+      "pinterest": {
+        "value": "#bd081c"
+      },
+      "youtube": {
+        "value": "#f00"
+      },
+      "x": {
+        "value": "#000"
+      }
+    }
+  }
+}

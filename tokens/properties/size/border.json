@@ -1,0 +1,14 @@
+{
+  "size": {
+    "border": {
+      "none": { "value": "0" },
+      "sm": { "value": "1" },
+      "md": { "value": "2" },
+      "lg": { "value": "4" },
+      "xl": { "value": "8" },
+      "control": {
+        "value": "{size.border.sm}"
+      }
+    }
+  }
+}

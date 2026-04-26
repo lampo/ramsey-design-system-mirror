@@ -1,0 +1,48 @@
+{
+  "name": "@ramsey-design-system/common",
+  "version": "0.9.4",
+  "license": "UNLICENSED",
+  "author": "Ramsey Solutions",
+  "main": "dist/js/index.cjs.js",
+  "module": "dist/js/index.esm.js",
+  "files": [
+    "dist",
+    "ftl",
+    "sass",
+    "types",
+    "ts",
+    "react"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/js/index.esm.js",
+      "require": "./dist/js/index.cjs.js"
+    },
+    "./react": {
+      "import": "./dist/react/index.esm.js",
+      "require": "./dist/react/index.cjs.js"
+    },
+    "./vue": {
+      "import": "./dist/vue/index.esm.js",
+      "require": "./dist/vue/index.cjs.js"
+    },
+    "./types": "./types/index.d.ts",
+    "./sass/*": "./sass/*",
+    "./dist/*": "./dist/*"
+  },
+  "types": "dist/js/ts/index.d.ts",
+  "dependencies": {
+    "@ramsey-design-system/tokens": "^1.21.11"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1 || ^18.2.0 || ^19.0.0",
+    "react-dom": "^17.0.1 || ^18.2.0 || ^19.0.0"
+  },
+  "scripts": {
+    "build": "npm-run-all --parallel --max-parallel 2 build:*",
+    "build:ts": "rollup -c",
+    "build:css": "yarn sass sass/_base.scss:dist/base.css --load-path=../node_modules/",
+    "build:scss": "mkdir -p dist && printf \"@forward '../sass/base';\\n\" > dist/base.scss",
+    "watch": "npm-run-all --parallel 'build:* --watch'"
+  }
+}

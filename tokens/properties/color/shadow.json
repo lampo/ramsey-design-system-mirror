@@ -1,0 +1,33 @@
+{
+  "color": {
+    "shadow": {
+      "sm": {
+        "value": "#1f2426",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.1
+          }
+        ]
+      },
+      "md": {
+        "value": "#1f2426",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.12
+          }
+        ]
+      },
+      "lg": {
+        "value": "#1f2426",
+        "modify": [
+          {
+            "type": "alpha",
+            "amount": 0.18
+          }
+        ]
+      }
+    }
+  }
+}

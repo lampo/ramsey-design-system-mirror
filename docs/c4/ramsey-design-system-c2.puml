@@ -1,0 +1,122 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+' C4 OFFICIAL REQUIREMENT: Title describing diagram type and scope
+title Container Diagram for Ramsey Design System
+
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v3.0.0
+!include ICONURL/devicons2/react.puml
+!include ICONURL/devicons2/vuejs.puml
+!include ICONURL/devicons2/typescript.puml
+!include ICONURL/devicons2/ruby.puml
+!include ICONURL/devicons2/sass.puml
+!include ICONURL/devicons2/npm.puml
+!include ICONURL/devicons2/storybook.puml
+!include ICONURL/devicons2/rollup.puml
+!include ICONURL/devicons2/jest.puml
+!include ICONURL/devicons2/gitlab.puml
+!include ICONURL/font-awesome-6/users.puml
+!include ICONURL/font-awesome-6/desktop.puml
+!include ICONURL/font-awesome-6/server.puml
+!include ICONURL/font-awesome-6/cubes.puml
+!include ICONURL/font-awesome-6/book.puml
+!include ICONURL/font-awesome-6/cube.puml
+
+HIDE_STEREOTYPE()
+
+' C4 OFFICIAL REQUIREMENT: Legend/Key for custom notation
+' Custom Relationship Tags:
+'  - Blue dashed = Async/Build-time dependencies
+'  - Green solid = Runtime dependencies
+'  - Purple dashed = Publishing/deployment
+AddRelTag(build_relationship, $lineColor="blue", $textColor="blue", $lineStyle="DashedLine")
+AddRelTag(runtime_relationship, $lineColor="green", $textColor="green")
+AddRelTag(publish_relationship, $lineColor="purple", $textColor="purple", $lineStyle="DashedLine")
+
+' C4 OFFICIAL REQUIREMENT: People who interact with the system
+Person(frontend_dev, "Frontend Developer", "Builds web applications using React or Vue", $sprite="users")
+Person(backend_dev, "Backend Developer", "Builds server-rendered applications", $sprite="users")
+Person(ds_maintainer, "Design System Maintainer", "Develops and maintains components", $sprite="users")
+
+' C4 OFFICIAL REQUIREMENT: External systems
+System_Ext(consumer_web_apps, "Consumer Web Applications", "React/Vue applications consuming design system", $sprite="desktop")
+System_Ext(consumer_backend_apps, "Consumer Backend Applications", "Freemarker/Ruby apps consuming design system", $sprite="server")
+System_Ext(artifactory, "Artifactory", "npm and Ruby gem registry", $sprite="cubes")
+System_Ext(gitlab_cicd, "GitLab CI/CD", "Automated CI/CD pipeline", $sprite="gitlab")
+
+System_Boundary(ramsey_ds, "Ramsey Design System") {
+    ' C4 OFFICIAL REQUIREMENT: Containers with technology labels
+
+    Container(react_components, "React Components", "TypeScript/React 19", "React component library with 34+ components. Outputs CJS and ESM bundles via Rollup.", $sprite="react")
+    Container(vue_components, "Vue Components", "Vue 3", "Vue 3 component library matching React implementation. Outputs CJS and ESM bundles.", $sprite="vuejs")
+    Container(freemarker_macros, "Freemarker Macros", "Freemarker/Java", "Server-side template macros for Java applications. Tested with JUnit.", $sprite="cube")
+    Container(ruby_viewcomponents, "Ruby ViewComponents", "Ruby/Rails ViewComponents", "Ruby gem packages for Rails applications. Tested with Minitest.", $sprite="ruby")
+
+    Container(design_tokens, "Design Tokens", "Style Dictionary/SCSS/CSS", "Design tokens (colors, spacing, typography, breakpoints) built with Style Dictionary. Outputs JSON, SCSS, CSS variables, TypeScript, and Tailwind config.", $sprite="sass")
+    Container(icons_package, "Icons Package", "SVG/npm", "Icon library package providing SVG icons for all component formats.", $sprite="cube")
+    Container(common_utilities, "Common Utilities", "TypeScript/SCSS", "Shared React utilities, TypeScript types, and base styles used across all components.", $sprite="typescript")
+
+    Container(build_system, "Build System", "Rollup/Vite/Sass/Maven/Rake", "Monorepo build orchestration using Lerna. Builds all component formats and publishes to Artifactory.", $sprite="rollup")
+    Container(test_system, "Test System", "Jest/JUnit/Minitest", "Multi-platform test suite. Jest for JS/TS/Vue, JUnit for Freemarker, Minitest for Ruby.", $sprite="jest")
+
+    Container(storybook_react, "Storybook (React)", "Storybook 10/Vite", "Interactive component documentation for React components on port 1234.", $sprite="storybook")
+    Container(storybook_vue, "Storybook (Vue)", "Storybook 10/Vite", "Interactive component documentation for Vue components on port 6007.", $sprite="storybook")
+}
+
+' C4 OFFICIAL REQUIREMENT: Relationships with technology/protocol labels
+
+' Developer interactions
+Rel(ds_maintainer, build_system, "Builds and tests components locally", "yarn build", $tags="build_relationship")
+Rel(ds_maintainer, storybook_react, "Develops components interactively", "yarn start", $tags="build_relationship")
+Rel(ds_maintainer, storybook_vue, "Develops components interactively", "yarn start:vue", $tags="build_relationship")
+Rel(ds_maintainer, test_system, "Runs tests", "yarn test", $tags="build_relationship")
+
+Rel(frontend_dev, react_components, "Installs and imports", "npm/yarn", $tags="runtime_relationship")
+Rel(frontend_dev, vue_components, "Installs and imports", "npm/yarn", $tags="runtime_relationship")
+Rel(backend_dev, freemarker_macros, "Includes templates", "Maven", $tags="runtime_relationship")
+Rel(backend_dev, ruby_viewcomponents, "Installs gems", "Bundler", $tags="runtime_relationship")
+
+' Component dependencies
+Rel(react_components, design_tokens, "Imports token values", "npm dependency", $tags="build_relationship")
+Rel(react_components, common_utilities, "Uses shared utilities", "npm dependency", $tags="build_relationship")
+Rel(react_components, icons_package, "Uses icons", "npm dependency", $tags="build_relationship")
+
+Rel(vue_components, design_tokens, "Imports token values", "npm dependency", $tags="build_relationship")
+Rel(vue_components, common_utilities, "Uses shared utilities", "npm dependency", $tags="build_relationship")
+Rel(vue_components, icons_package, "Uses icons", "npm dependency", $tags="build_relationship")
+
+Rel(freemarker_macros, design_tokens, "Includes SCSS", "file reference", $tags="build_relationship")
+Rel(ruby_viewcomponents, design_tokens, "Includes CSS", "file reference", $tags="build_relationship")
+
+' Build system relationships
+Rel(build_system, react_components, "Builds and bundles", "Rollup/TypeScript", $tags="build_relationship")
+Rel(build_system, vue_components, "Builds and bundles", "Rollup/Vue", $tags="build_relationship")
+Rel(build_system, freemarker_macros, "Compiles and tests", "Maven", $tags="build_relationship")
+Rel(build_system, ruby_viewcomponents, "Packages gems", "Rake", $tags="build_relationship")
+Rel(build_system, design_tokens, "Generates tokens", "Style Dictionary", $tags="build_relationship")
+
+' Test system relationships
+Rel(test_system, react_components, "Tests components", "Jest/@testing-library", $tags="build_relationship")
+Rel(test_system, vue_components, "Tests components", "Jest/@testing-library", $tags="build_relationship")
+Rel(test_system, freemarker_macros, "Tests macros", "JUnit", $tags="build_relationship")
+Rel(test_system, ruby_viewcomponents, "Tests components", "Minitest", $tags="build_relationship")
+
+' Storybook relationships
+Rel(storybook_react, react_components, "Documents and demos", "Storybook stories", $tags="build_relationship")
+Rel(storybook_vue, vue_components, "Documents and demos", "Storybook stories", $tags="build_relationship")
+
+' CI/CD and publishing
+Rel(gitlab_cicd, build_system, "Triggers builds", "GitLab Runner", $tags="build_relationship")
+Rel(gitlab_cicd, test_system, "Runs test suite", "GitLab Runner", $tags="build_relationship")
+Rel(build_system, artifactory, "Publishes packages", "Lerna/npm/gem", $tags="publish_relationship")
+Rel(gitlab_cicd, storybook_react, "Builds and deploys", "GitLab Runner", $tags="publish_relationship")
+
+' Consumer application dependencies
+Rel_D(consumer_web_apps, react_components, "Imports components", "npm/ESM", $tags="runtime_relationship")
+Rel_D(consumer_web_apps, vue_components, "Imports components", "npm/ESM", $tags="runtime_relationship")
+Rel_D(consumer_web_apps, design_tokens, "Uses tokens", "npm/SCSS", $tags="runtime_relationship")
+
+Rel_D(consumer_backend_apps, freemarker_macros, "Includes macros", "Maven", $tags="runtime_relationship")
+Rel_D(consumer_backend_apps, ruby_viewcomponents, "Requires gems", "Bundler", $tags="runtime_relationship")
+
+@enduml

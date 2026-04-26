@@ -1,0 +1,29 @@
+{
+  "version": "independent",
+  "npmClient": "yarn",
+  "command": {
+    "publish": {
+      "registry": "https://ramseysolutions.jfrog.io/artifactory/api/npm/npm/"
+    },
+    "version": {
+      "conventionalCommits": true,
+      "conventionalGraduate": true,
+      "message": "chore(release): publish\n\n[skip ci]",
+      "ignoreChanges": [
+        "**/*.md",
+        "**/*.mdx",
+        "**/doc/**",
+        "**/__snapshots__/**",
+        "**/*.test.js",
+        "**/.cicd/**",
+        "components/*/stories/**",
+        "components/*/theme/**",
+        "components/*/argtypes/**",
+        "components/*/lib/**",
+        "components/*/test/**"
+      ]
+    }
+  },
+  "useNx": false,
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json"
+}

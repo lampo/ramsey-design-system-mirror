@@ -1,0 +1,32 @@
+{
+  "color": {
+    "text": {
+      "base": {
+        "value": "{color.base.gray.90}"
+      },
+      "darkCanvas": {
+        "value": "{color.base.white}"
+      },
+      "subdued": {
+        "value": "{color.base.gray.70}"
+      },
+      "link": {
+        "_": {
+          "value": "{color.base.blue.50}"
+        },
+        "interactive": {
+          "value": "{color.base.blue.60}"
+        }
+      },
+      "error": {
+        "value": "{color.base.red.70}"
+      },
+      "success": {
+        "value": "{color.base.green.80}"
+      },
+      "disabled": {
+        "value": "{color.base.gray.40}"
+      }
+    }
+  }
+}
